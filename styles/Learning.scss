@@ -121,5 +121,8 @@
     font-size: 0.8rem;
     font-weight: map-get($font-weights, "small");
 }
+.learningTable{
+    width: 1000px;
+}
 
 @import "../scss/media";

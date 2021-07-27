@@ -53,6 +53,7 @@ function Learning({ user }) {
                             style={{
                                 borderBottom: "1px solid rgb(200,200,200)",
                             }}
+                            className="learningTable"
                         >
                             <TitleHeadCell>Title</TitleHeadCell>
                             <MarkedHeadCell>Completed</MarkedHeadCell>
@@ -61,7 +62,7 @@ function Learning({ user }) {
                             </PercentageHeadCell>
                             <AuthorHeadCell>Author</AuthorHeadCell>
                         </StyledHead>
-                        <StyledBody>
+                        <StyledBody className="learningTable">
                             {[...Array(10)].map((x, i) => (
                                 <StyledHead
                                     key={i}

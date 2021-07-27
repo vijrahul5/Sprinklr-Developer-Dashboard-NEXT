@@ -12,7 +12,7 @@
         padding-right: 2rem;
     }
     .learningTable {
-        width: 900px;
+        width: 900px !important;
     }
 }
 @media only screen and (max-width: 1250px) {
@@ -23,7 +23,7 @@
         margin-top: 3.5rem;
     }
     .learningTable {
-        width: unset;
+        width: unset !important;
     }
     .sectionContainer {
         width: 100%;
@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 950px) {
     .learningTable {
-        width: 1000px;
+        width: 1000px !important;
     }
     .basicInfo__wrapper {
         padding: 1rem;
