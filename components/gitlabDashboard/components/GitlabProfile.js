@@ -4,7 +4,7 @@ import React, { useCallback, useState, useEffect, lazy, Suspense } from "react";
 import useFetchEmployeeTeamData from "../../../hooks/useFetchEmployeeTeamData";
 import { Select, SIZE } from "baseui/select";
 import Expe from "../../table/Expe";
-import Notification from "./Notification";
+// import Notification from "./Notification";
 import { withStyle, useStyletron } from "baseui";
 import Loader from "../../loaders/Tombstone";
 import {
@@ -260,7 +260,7 @@ const GitlabProfile = (props) => {
                     author={author}
                     minWidth="1050px"
                 />
-                <Notification />
+                {/* <Notification /> */}
             </div>
         );
     }
@@ -290,7 +290,7 @@ const GitlabProfile = (props) => {
                 author={author}
                 minWidth="1070px"
             />
-            <Notification />
+            {/* <Notification /> */}
         </>
     );
 };

@@ -7,7 +7,7 @@ import "react-notifications/lib/notifications.css";
 import useAuthorize from "../../hooks/useAuthorize";
 
 //components
-import Notification from "../notification/Notification";
+// import Notification from "../notification/Notification";
 import Loader from "../../../loaders/Tombstone";
 
 const Jira = ({ user }) => {
@@ -27,7 +27,7 @@ const Jira = ({ user }) => {
         {!loading && !doneAuthentication ? <JiraAuth /> : <></>}
         {!loading && doneAuthentication ? <Widgetjira user={user} /> : <></>}
       </Suspense>
-      <Notification user={user}/>
+      {/* <Notification user={user}/> */}
     </>
   );
 };
