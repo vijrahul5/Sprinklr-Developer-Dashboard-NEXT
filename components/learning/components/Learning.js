@@ -42,7 +42,6 @@ function Learning({ user }) {
     const [loading, data, error, fetchLearningResources] =
         useFetchLearningResources();
 
-    
     const [css] = useStyletron();
     if (loading) {
         return (
@@ -65,6 +64,7 @@ function Learning({ user }) {
                         <StyledBody>
                             {[...Array(10)].map((x, i) => (
                                 <StyledHead
+                                    key={i}
                                     style={{
                                         borderBottom:
                                             "1px solid rgb(200,200,200)",

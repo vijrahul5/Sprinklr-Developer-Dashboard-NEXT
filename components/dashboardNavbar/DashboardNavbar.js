@@ -25,7 +25,7 @@ function DashboardNavbar({ user }) {
                         setProfileView((profileView) => !profileView)
                     }
                 >
-                    <img src={user.picture} alt="" />
+                    <Image src={user.picture} alt="" layout="fill" />
                     {profileView ? <Profile user={user} /> : null}
                 </div>
             </OutsideClick>

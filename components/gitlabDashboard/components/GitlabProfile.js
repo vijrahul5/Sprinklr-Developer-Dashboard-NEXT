@@ -175,6 +175,7 @@ const GitlabProfile = (props) => {
                     <StyledBody>
                         {[...Array(15)].map((x, i) => (
                             <StyledHead
+                                key={i}
                                 style={{
                                     borderBottom: "1px solid rgb(200,200,200)",
                                 }}

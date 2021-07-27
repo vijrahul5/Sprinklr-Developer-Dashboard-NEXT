@@ -58,7 +58,7 @@ function checkMarked(resource, email) {
     return false;
 }
 
-function LearningResource({ resource, user,fetchLearningResources }) {
+function LearningResource({ resource, user, fetchLearningResources }) {
     const [value, setValue] = useState(false);
     const [updateError, updateLearningResource] = useUpdateLearningResource();
     const percentage = Math.ceil(
@@ -125,7 +125,10 @@ function LearningResource({ resource, user,fetchLearningResources }) {
                                 <div>
                                     {resource.markedBy.map((markPerson) => {
                                         return (
-                                            <div className="learningResource__toolTipEmail">
+                                            <div
+                                                key={markPerson.email}
+                                                className="learningResource__toolTipEmail"
+                                            >
                                                 {markPerson.email}
                                             </div>
                                         );
