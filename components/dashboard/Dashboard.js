@@ -56,10 +56,10 @@ export default function Dashboard() {
                     <h1>Jira</h1>
                     <JiraDashboard user={user} />
                 </div>
-                <div className="section">
+                {/* <div className="section">
                     <h1>Gitlab</h1>
                     <GitlabDashboard user={user} />
-                </div>
+                </div> */}
             </div>
             <NotificationContainer />
         </>
