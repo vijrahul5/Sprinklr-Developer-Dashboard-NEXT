@@ -1,3 +1,11 @@
 module.exports = {
-  reactStrictMode: true,
-}
+    reactStrictMode: true,
+    async rewrites() {
+        return [
+            {
+                source: "/api/",
+                destination: "http://localhost:5000/api/",
+            },
+        ];
+    },
+};

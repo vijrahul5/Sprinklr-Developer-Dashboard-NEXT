@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./resets";
+
+.btnCustom {
+    background-color: $color-primary !important;
+    color: $color-widget !important;
+    border-radius: $border-radius !important;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.btnCustom--tertiary {
+    color: $color-primary !important;
+    border-radius: $border-radius !important;
+    background-color: $color-widget !important;
+    &:hover {
+        background-color: $color-secondary !important;
+    }
+}
+.inputCustom {
+    border-radius: $border-radius !important;
+    color: black;
+}
+
+.ml1 {
+    margin-left: 1rem !important;
+}
+.ml12 {
+    margin-left: 0.5rem !important;
+}
+.mt1 {
+    margin-top: 0.8rem !important;
+}

@@ -1,0 +1,51 @@
+@import "../scss/base";
+
+.dashboardContainer {
+    margin-top: 3.5rem;
+    padding: map-get($paddings, "medium");
+}
+.basicInfo__wrapper {
+    width: 32rem;
+    height: 100%;
+    padding: map-get($paddings, "medium");
+    padding-right: 4rem;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+}
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.sectionContainer {
+    margin-right: 28 + 4rem;
+    height: fit-content;
+    @include flexCenter(column);
+    padding: 2rem;
+    padding-left: 4rem;
+    margin-top: 3.5rem;
+}
+.section {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: map-get($margins, "medium");
+    padding: map-get($paddings, "medium");
+    border-top: $border;
+    box-shadow: $shadow;
+    border-radius: $border-radius;
+
+    h1 {
+        color: $color-primary;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $color-primary;
+        margin-bottom: map-get($margins, "medium");
+        font-weight: map-get($font-weights, "small");
+        font-size: 1.8rem;
+    }
+}
+
+@import "../scss/media";

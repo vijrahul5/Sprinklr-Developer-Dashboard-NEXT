@@ -1,0 +1,48 @@
+@import "../scss/base";
+.landingPage__wrapper {
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+.signInSection {
+    width: 50rem;
+    background-color: #fafafa;
+    border-radius: 1rem;
+}
+.landingPage__image {
+    background-image: url("../assets/Sprinklr_Brand_Logo_-_PNG_RGB_logo_horiz_col.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.landingPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/cool-background.png");
+    background-size: cover;
+}
+.landingPage__navbar {
+    width: 100%;
+    background-color: white;
+    height: 5rem;
+    @include flexCenter(row);
+}
+.landingPage__navbar__heading {
+    width: fit-content;
+    color: black;
+    font-family: $font-primary;
+    font-weight: 300;
+}
+
+@import "../scss/media";

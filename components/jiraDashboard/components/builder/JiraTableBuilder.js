@@ -1,0 +1,73 @@
+//libraries
+import React from "react";
+import Image from "next/image";
+
+//utils
+import highest_jira from "../../assets/images/highest_jira.svg";
+import high_jira from "../../assets/images/high_jira.svg";
+import medium_jira from "../../assets/images/medium_jira.svg";
+import low_jira from "../../assets/images/low_jira.svg";
+import lowest_jira from "../../assets/images/lowest_jira.svg";
+
+const JiraTableBuilder = () => {
+    return {
+        setIssueName: function (issueName) {
+            this.issueName = issueName;
+            return this;
+        },
+
+        setIssueSummary: function (issueSummary) {
+            this.issueSummary = issueSummary;
+            return this;
+        },
+        setIssueStatus: function (issueStatus) {
+            this.issueStatus = issueStatus;
+            return this;
+        },
+        setIssueKey: function (jiraBaseUrl, issueKey) {
+            const url = jiraBaseUrl + "/browse" + `/${issueKey}`;
+            this.issueKey = (
+                <a href={url} className="jiraIssueUrl">
+                    {issueKey}
+                </a>
+            );
+            return this;
+        },
+        setIssuePriority: function (issuePriority) {
+            this.issuePriority = "";
+            let imgSrc = new Map();
+            imgSrc.set("Highest", highest_jira);
+            imgSrc.set("High", high_jira);
+            imgSrc.set("Medium", medium_jira);
+            imgSrc.set("Low", low_jira);
+            imgSrc.set("Lowest", lowest_jira);
+
+            if (imgSrc.has(issuePriority)) {
+                this.issuePriority = (
+                    <>
+                        <Image
+                            className="jp"
+                            src={imgSrc.get(issuePriority)}
+                            alt={issuePriority}
+                            width={25}
+                            height={25}
+                        />
+                        <p className="jp__description">{issuePriority}</p>
+                    </>
+                );
+            }
+            return this;
+        },
+        build: function () {
+            return [
+                this.issueName,
+                this.issueKey,
+                this.issueStatus,
+                this.issuePriority,
+                this.issueSummary,
+            ];
+        },
+    };
+};
+
+export default JiraTableBuilder;
