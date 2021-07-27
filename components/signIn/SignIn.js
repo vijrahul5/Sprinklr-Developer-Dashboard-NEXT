@@ -12,6 +12,7 @@ function SignIn() {
     const [loading, setLoading] = useState(false);
 
     async function handleGoogleLoginSuccess({ tokenId }) {
+        console.log(tokenId);
         Auth.login(tokenId, setLoading);
     }
     async function handleGoogleLoginFailiure(res) {
