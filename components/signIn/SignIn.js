@@ -17,7 +17,6 @@ function SignIn() {
         Auth.login(tokenId, setLoading);
     }
     async function handleGoogleLoginFailiure(res) {
-        alert("fail");
         NotificationManager.error("Error!", "Login Failed!", 5000);
     }
 
